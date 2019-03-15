@@ -11,6 +11,16 @@ export class StateHandler {
         //
     }
 
+    movePlayer (clientId: string, move: any): void {
+        if (move.x) {
+            this.players[ clientId ].x += move.x;
+        } if (move.y) {
+            this.players[ clientId ].y += move.y;
+        } if (move.z) {
+            this.players[ clientId ].z += move.z
+        }
+    }
+
     addPlayer (clientId: string, player: Player): void {
         this.players[ clientId ] = player;
     }
